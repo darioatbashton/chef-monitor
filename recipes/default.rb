@@ -43,13 +43,6 @@ end
   check-mtime.rb
   check-tail.rb
   check-fs-writable.rb
-  check-disk-usage.rb
-  check-fstab-mounts.rb
-  check-smart.rb
-  check-smart-status.rb
-  metrics-disk-capacity.rb
-  metrics-disk.rb
-  metrics-disk-usage.rb
 ].each do |default_plugin|
   cookbook_file "/etc/sensu/plugins/#{default_plugin}" do
     source "plugins/#{default_plugin}"
