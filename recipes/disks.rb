@@ -5,7 +5,7 @@ sensu_check "disks_usage" do
   handlers ["pagerduty"]
   standalone true
   interval 30
-  occurences 1
+  additional(:notification => "Playbook -> FIXME", :occurrences => 5)
 end
 
 sensu_check "metrics-disk-usage" do
