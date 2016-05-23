@@ -10,7 +10,7 @@ end
 sensu_check "metrics-disk-usage" do
   type "metric"
   command "metrics-disk-usage.rb"
-  handlers ["metrics"]
+  handlers ["metrics, pagerduty"]
   standalone true
   interval 30
 end
