@@ -62,4 +62,9 @@ if node["monitor"]["use_statsd_input"]
   include_recipe "monitor::_statsd"
 end
 
-include_recipe "sensu::client_service"
+sensu_service "sensu-client" do
+  init_style node["sensu"]["init_style"]
+  action [:enable, :start]
+  ignore_failure true
+end
+# include_recipe "sensu::client_service"
