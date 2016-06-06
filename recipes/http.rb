@@ -1,5 +1,5 @@
 sensu_check "api_endpoint" do
-  command "check-http.rb -q \"status\":\"UP\" -u http://usagereporting.ENVIRONMENT.bl.store.bbc.com/bl/health"
+  command "check-http.rb -q UP -u http://usagereporting.ENVIRONMENT.bl.store.bbc.com/bl/health"
   handlers ["pagerduty"]
   standalone true
   interval 30
