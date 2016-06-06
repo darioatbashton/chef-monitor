@@ -5,7 +5,7 @@ sensu_check "disks_usage" do
   handlers ["pagerduty"]
   standalone true
   interval 30
-  additional(:notification => "Playbook -> FIXME", :occurrences => 5)
+  additional(:notification => "Playbook -> https://git.bashton.net/Bashton/bbcstore-bl/src/develop/bl-infrastructure/playbooks/disk.md", :occurrences => 5)
 end
 
 sensu_check "metrics-disk-usage" do
